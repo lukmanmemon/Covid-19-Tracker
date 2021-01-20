@@ -24,7 +24,6 @@ fetch("https://disease.sh/v3/covid-19/countries")
       }
       newArray.sort(([a, b], [c, d]) => c - a);
   
-      
       for (var j = 0; j < newArray.length; j++) {
         sortedCountriesCases.push(newArray[j][0] + " " + newArray[j][1]);
       }
@@ -35,7 +34,6 @@ fetch("https://disease.sh/v3/covid-19/countries")
       }
       newArray2.sort(([a, b], [c, d]) => c - a);
   
-      
       for (var j = 0; j < newArray2.length; j++) {
         sortedCountriesDeaths.push(newArray2[j][0] + " " + newArray2[j][1]);
       }
@@ -110,3 +108,4 @@ function createList(arr) {
   return list;
 }
 
+console.log(sortedCountriesDeaths);
