@@ -1,18 +1,66 @@
 #map {
-    height: 70%;
+    position: fixed;
+    left: 15%;
+    height: 100%;
+    width: 70%;
 }     
-/* Optional: Makes the sample page fill the window. */
+
 html, body {
+    background-color: black;
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
 #globalCases {
-    background-color: black;
-    color: white;
-    float: left;
+    background-color: #535353;
+    position: fixed;
+    left: 30px;
+    top: 0;
+    color: gold;
     padding: 0px 20px;
+    margin-top: 20px;
+    margin-right: 25px;
+}
+
+p {
+    color: white;
+}
+
+#globalDeaths {
+    background-color: #535353;
+    position: fixed;
+    right: 20px;
+    top: 0;
+    color: red;
+    padding: 0px 20px;
+    margin-top: 20px;
     margin-right: 20px;
+}
+
+#countriesByCases {
+    color: white;
+    overflow: scroll;
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 19%;
+    left: 1%;
+}
+
+#deathsByCases {
+    color: white;
+    overflow: scroll;
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 19%;
+    right: 1%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
