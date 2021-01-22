@@ -105,3 +105,17 @@ ul {
 ::-webkit-scrollbar-thumb:hover {
     background: #b30000; 
 }
+
+#countryInfoWindow {
+    display: none;
+    background-color: rgb(0, 0, 0, 0.6);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    width: 20%;
+    min-height: 20%;
+    position: fixed;
+    top: 2%;
+    left: 17%;
+    padding: 0px 10px;
+}

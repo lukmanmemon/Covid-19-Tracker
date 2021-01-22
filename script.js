@@ -2,7 +2,8 @@ var map;
 var countriesDetails = [];
 var sortedCountriesCases = [];
 var sortedCountriesDeaths = [];
-const myLatLang = { lat: 56.130, lng: -106.347 };
+const myLatLang = { lat: 56.130, lng: -50.347 };
+var countryInfoWindow = document.getElementById("countryInfoWindow");
 
 fetch("https://disease.sh/v3/covid-19/countries")
    .then(response => response.json())
@@ -50,10 +51,6 @@ function initMap() {
   });
 
   var iconBase = "http://maps.google.com/mapfiles/kml/pal3/";
-  
-  var infowindow = new google.maps.InfoWindow( {
-    maxWidth: 100
-  });
 
   for (var i = 0; i < countriesDetails.length; i++) {
     marker = new google.maps.Marker({
@@ -63,8 +60,10 @@ function initMap() {
     });
     marker.addListener('click', (function(marker, i) {
       return function() {
-        infowindow.setContent(countriesDetails[i][0] + "\nCases: " + countriesDetails[i][3] + "\nDeaths: " + countriesDetails[i][4]);
-        infowindow.open(map, marker);
+        document.getElementById("countryName").textContent = countriesDetails[i][0];
+        document.getElementById("cases").textContent = "Cases: " + countriesDetails[i][3];
+        document.getElementById("deaths").textContent = "Deaths: " + countriesDetails[i][4];
+        countryInfoWindow.style.display = "block";
       }
     })(marker, i));
   }
