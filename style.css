@@ -28,8 +28,7 @@ p {
     top: 0;
     color: red;
     padding: 0px 20px;
-    margin-top: 20px;
-    margin-right: 20px;
+    margin: 20px;
 }
 
 #globalDeaths {
@@ -43,8 +42,7 @@ p {
     top: 0;
     color: red;
     padding: 0px 20px;
-    margin-top: 20px;
-    margin-right: 20px;
+    margin: 20px
 }
 
 #listTitle1 {
@@ -64,8 +62,8 @@ p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow: scroll;
     width: 13%;
-    height: 100%;
-    position: fixed;
+    height: 75%;
+    position: absolute;
     top: 25%;
     left: 1%;
 }
@@ -75,10 +73,11 @@ p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow: scroll;
     width: 13%;
-    height: 100%;
-    position: fixed;
+    height: 75%;
+    position: absolute;
     top: 25%;
     right: 1%;
+  
 }
 
 ul {

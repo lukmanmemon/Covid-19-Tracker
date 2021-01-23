@@ -2,9 +2,10 @@ var map;
 var countriesDetails = [];
 var sortedCountriesCases = [];
 var sortedCountriesDeaths = [];
-const myLatLang = { lat: 56.130, lng: -50.347 };
 var countryInfoWindow = document.getElementById("countryInfoWindow");
+const myLatLang = { lat: 56.130, lng: -50.347 };
 
+// Get country's information
 fetch("https://disease.sh/v3/covid-19/countries")
    .then(response => response.json())
    .then(data => {
@@ -69,30 +70,18 @@ function initMap() {
   }
 }
 
-function getTotalGlobalCases() {
-  var globalCases = document.getElementById("globalCases");
-
+function getGlobalCasesAndDeaths() {
   fetch("https://disease.sh/v3/covid-19/all")
    .then(response => response.json())
    .then(data => {
       var totalGlobalCases = data.cases;
-      document.getElementById("globalCasesNumber").textContent = totalGlobalCases;
-  });
-}
-
-function getTotalGlobalDeaths() {
-  var globalDeaths = document.getElementById("globalDeaths");
-
-  fetch("https://disease.sh/v3/covid-19/all")
-    .then(response => response.json())
-    .then(data => {
       var totalGlobalDeaths = data.deaths;
+      document.getElementById("globalCasesNumber").textContent = totalGlobalCases;
       document.getElementById("globalDeathsNumber").textContent = totalGlobalDeaths;
   });
 }
 
-getTotalGlobalCases();
-getTotalGlobalDeaths();
+getGlobalCasesAndDeaths();
 
 function createList(arr) {
   var list = document.createElement("ul");
@@ -106,5 +95,3 @@ function createList(arr) {
   }
   return list;
 }
-
-console.log(sortedCountriesDeaths);
