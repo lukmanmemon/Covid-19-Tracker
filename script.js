@@ -42,17 +42,10 @@ fetch("https://disease.sh/v3/covid-19/countries")
 
       document.getElementById("countriesByCases").appendChild(createList(sortedCountriesCases));
       document.getElementById("deathsByCases").appendChild(createList(sortedCountriesDeaths));
-
-      initMap();
+      placeMarkers();
 });
 
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: myLatLang,
-    zoom: 3,
-    minZoom: 1
-  });
-
+function placeMarkers() {
   var iconBase = "http://maps.google.com/mapfiles/kml/pal3/";
 
   for (var i = 0; i < countriesDetails.length; i++) {
@@ -72,6 +65,13 @@ function initMap() {
   }
 }
 
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: myLatLang,
+    zoom: 3,
+    minZoom: 1
+  });
+}
 
 function getGlobalCasesAndDeaths() {
   fetch("https://disease.sh/v3/covid-19/all")
