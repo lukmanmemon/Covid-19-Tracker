@@ -42,6 +42,8 @@ fetch("https://disease.sh/v3/covid-19/countries")
 
       document.getElementById("countriesByCases").appendChild(createList(sortedCountriesCases));
       document.getElementById("deathsByCases").appendChild(createList(sortedCountriesDeaths));
+
+      initMap();
 });
 
 function initMap() {
@@ -69,6 +71,7 @@ function initMap() {
     })(marker, i));
   }
 }
+
 
 function getGlobalCasesAndDeaths() {
   fetch("https://disease.sh/v3/covid-19/all")
