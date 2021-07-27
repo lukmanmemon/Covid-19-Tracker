@@ -5,3 +5,6 @@ You can access the Covid-19 tracker here: https://lukmanmemon.github.io/Covid-19
 
 # API Keys
 You can add your personal Google Maps API key in index.html. If you wish to deploy, move your API keys to a safe place or restrict its usage.
+
+![alt text](https://github.com/lukmanmemon/Covid-19-Tracker/blob/main/images/app_screenshot.png "App Screenshot")
+
